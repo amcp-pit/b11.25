@@ -1,7 +1,7 @@
 CC=g++
 CFLAGS=-c -Wall
 LDFLAGS=
-SOURCES=main.cpp stack.cpp test.cpp
+SOURCES=main.cpp stack.cpp test.cpp mytest.cpp
 OBJECTS=$(SOURCES:.cpp=.o)
 EXECUTABLE=ex1
 

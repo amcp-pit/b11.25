@@ -4,6 +4,8 @@
 #include "stack.h"
 #include "test.h"
 
+#define assertm(exp, msg) assert(((void)msg, exp))
+
 int main() {
 
 #ifndef NDEBUG
@@ -13,7 +15,9 @@ int main() {
 	std::cout << "size: ";
 	int n;
 	std::cin >> n;
-	assert(n > 0);
+//	assert((n > 0) && "stack size must be positive");
+//	assert(((void)"stack size must be positive", n > 0));
+	assertm(n>0, "stack size must be positive");
 	Stack S(n);
 
 	for(int i = 0; i < n; ++i){
